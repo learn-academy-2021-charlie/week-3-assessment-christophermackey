@@ -11,7 +11,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: `this` is used to access informatin within a class. 
 
-  Researched answer: `this` is  a javascript keyword that refers to the object it belongs to. It allows us to access information 
+  Researched answer: `this` is  a javascript keyword that refers to the object it belongs to.  
 
 
 

@@ -103,10 +103,29 @@ describe("arraySum", () => {
     test("returns an array of the accumulating sum. An empty array should return an empty array.", () => {
         // The nested expect method with .toEqual takes in the provided input and output data
         expect(arraySum(numbersToAdd1)).toEqual([2, 6, 51, 60])
-        expect(arraySum(numbersToAdd2)).toEqual([0, 7, -8, 12])
+        expect(arraySum(numbersToAdd2)).toEqual([0, 7, -1, 11])
         expect(arraySum(numbersToAdd3)).toEqual([])
     })
 })
 //running yarn jest gives me the expected error of arraySum is not defined
 
 // b) Create the function that makes the test pass.
+
+//declare a function called arraySum
+//use if statement to return empty array if inputted array length is less than one
+//declare a result variable to hold an array with the first value of the given array
+//use for loop to loop through given array starting at index 1
+//assign new values to the result variable by using current index
+//current index will be equal to the previous index in the result array added to the value of the current index in the give array
+//return result variable 
+const arraySum = (array) => {
+    let result = [array[0]];
+    if (array.length < 1) {
+        return []
+    }
+    for (let i = 1; i < array.length; i++) {
+        result[i] = result[i - 1] + array[i];
+    }
+    return result;
+};
+console.log(arraySum(numbersToAdd1));
